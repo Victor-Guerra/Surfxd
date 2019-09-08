@@ -47,5 +47,5 @@ del exp
 shakesort(scor, lines,0, len(lines))
 #
 #
-imprLst(lines)
+#imprLst(lines)
 prPlaces(lines, -3)
