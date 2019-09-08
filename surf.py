@@ -3,9 +3,19 @@ import re
 from sys import argv
 script, filename = argv
 
-def impr(li):
+def imprLst(li):
     for i in li:
-        print(i,end=',')
+        print(i,end=' ')
+    print('\n')
+
+def prPlaces(li, max):
+    i = -1
+    p = 1
+    while(i >= max):
+        print('Place No. {}'.format(p))
+        print(li[i])
+        i = i - 1
+        p = p + 1
     print('\n')
 # Para imprimir una lista bonita
 #
@@ -23,9 +33,14 @@ exp = re.compile(r"^\D+")
 
 scor = []
 for line in lines:
+    l = line
     rm = exp.match(line)
-    scor.append(int(line.strip(rm.group(0))))
+    scor.append(int(l.strip(rm.group(0))))
+#
+#
 
-impr(lines)
 shakesort(scor, lines,0, len(lines))
-impr(lines)
+#
+#
+imprLst(lines)
+prPlaces(lines, -3)
