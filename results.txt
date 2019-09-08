@@ -1,2 +1,10 @@
-persona1 9
-persona2 10
+puno 7
+pdos 10
+ptres 4
+pcuatro 1
+pcinco 8
+pseis 6
+psiete 9
+pocho 5
+pnueve 2
+pdiez 3
