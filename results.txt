@@ -1,4 +1,4 @@
-puno 7
+puno 7  
 pdos 10
 ptres 4
 pcuatro 1

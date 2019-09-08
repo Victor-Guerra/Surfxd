@@ -27,18 +27,23 @@ lines = contents.split('\n')
 # con cada linea.
 #li = [7,10,4,1,8,6,9,5,2,3]
 
-exp = re.compile(r"^\D+")
+exp = re.compile(r"[^0-9]+")
 # Crea una expresion regular para extraer unicamente 
 # la puntuacion de cada linea
 
 scor = []
 for line in lines:
-    l = line
-    rm = exp.match(line)
-    scor.append(int(l.strip(rm.group(0))))
+    unwanted = exp.findall(line)
+    for i in unwanted:
+        #print(i)
+        #print(line)
+        line = line.strip(i)
+        #print(line)
+    scor.append(int(line))
 #
 #
 
+del exp
 shakesort(scor, lines,0, len(lines))
 #
 #
